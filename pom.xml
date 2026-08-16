@@ -614,6 +614,16 @@
                 <artifactId>fileio-impl</artifactId>
                 <version>1.0.0.a-SNAPSHOT</version>
             </dependency>
+            <dependency>
+                <groupId>com.dwarfeng</groupId>
+                <artifactId>fileio-node</artifactId>
+                <version>1.0.0.a-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dwarfeng</groupId>
+                <artifactId>fileio-node-all-he</artifactId>
+                <version>1.0.0.a-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -658,5 +668,6 @@
         <module>fileio-stack</module>
         <module>fileio-sdk</module>
         <module>fileio-impl</module>
+        <module>fileio-node</module>
     </modules>
 </project>

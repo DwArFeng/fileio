@@ -4,6 +4,8 @@
 
 ### 功能构建
 
+- 完成 `fileio-node-all-he` 模块，启动测试通过。
+
 - 建立实体以及维护服务，并通过单元测试。
   - com.dwarfeng.fileio.stack.bean.entity.ExportConf。
   - com.dwarfeng.fileio.stack.bean.entity.ExporterInfo。

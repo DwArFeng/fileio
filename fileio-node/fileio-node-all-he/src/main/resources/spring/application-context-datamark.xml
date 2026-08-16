@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:datamark="http://dwarfeng.com/schema/dwarfeng-datamark"
+        xmlns="http://www.springframework.org/schema/beans"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://dwarfeng.com/schema/dwarfeng-datamark
+        http://dwarfeng.com/schema/dwarfeng-datamark/dwarfeng-datamark.xsd"
+>
+
+    <!-- ExportTaskSetting 数据标识。 -->
+    <datamark:handler
+            handler-name="exportTaskSettingDatamarkHandler"
+            resource-url="${com.dwarfeng.fileio.datamark.export_task_setting.resource_url}"
+            resource-charset="${com.dwarfeng.fileio.datamark.export_task_setting.resource_charset}"
+            update-allowed="${com.dwarfeng.fileio.datamark.export_task_setting.update_allowed}"
+    />
+
+    <!-- ImportTaskSetting 数据标识。 -->
+    <datamark:handler
+            handler-name="importTaskSettingDatamarkHandler"
+            resource-url="${com.dwarfeng.fileio.datamark.import_task_setting.resource_url}"
+            resource-charset="${com.dwarfeng.fileio.datamark.import_task_setting.resource_charset}"
+            update-allowed="${com.dwarfeng.fileio.datamark.import_task_setting.update_allowed}"
+    />
+
+    <!-- User 数据标识。 -->
+    <datamark:handler
+            handler-name="userDatamarkHandler"
+            resource-url="${com.dwarfeng.fileio.datamark.user.resource_url}"
+            resource-charset="${com.dwarfeng.fileio.datamark.user.resource_charset}"
+            update-allowed="${com.dwarfeng.fileio.datamark.user.update_allowed}"
+    />
+
+    <!-- QoS 服务。 -->
+    <datamark:qos/>
+</beans>
