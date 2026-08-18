@@ -79,6 +79,12 @@
             group="${com.dwarfeng.fileio.dubbo.provider.group}"
     />
     <dubbo:service
+            interface="com.dwarfeng.fileio.stack.service.ExportTemplateOperateService"
+            ref="exportTemplateOperateServiceImpl"
+            protocol="hessian"
+            group="${com.dwarfeng.fileio.dubbo.provider.group}"
+    />
+    <dubbo:service
             interface="com.dwarfeng.fileio.stack.service.ImportConfMaintainService"
             ref="importConfMaintainServiceImpl"
             group="${com.dwarfeng.fileio.dubbo.provider.group}"
@@ -111,6 +117,12 @@
     <dubbo:service
             interface="com.dwarfeng.fileio.stack.service.ImportTemplateInfoMaintainService"
             ref="importTemplateInfoMaintainServiceImpl"
+            group="${com.dwarfeng.fileio.dubbo.provider.group}"
+    />
+    <dubbo:service
+            interface="com.dwarfeng.fileio.stack.service.ImportTemplateOperateService"
+            ref="importTemplateOperateServiceImpl"
+            protocol="hessian"
             group="${com.dwarfeng.fileio.dubbo.provider.group}"
     />
     <dubbo:service

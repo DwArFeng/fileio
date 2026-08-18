@@ -4,6 +4,10 @@
 
 ### 功能构建
 
+- 增加操作服务。
+  - com.dwarfeng.fileio.stack.service.ExportTemplateOperateService。
+  - com.dwarfeng.fileio.stack.service.ImportTemplateOperateService。
+
 - 完成 `fileio-node-all-he` 模块，启动测试通过。
 
 - 建立实体以及维护服务，并通过单元测试。
