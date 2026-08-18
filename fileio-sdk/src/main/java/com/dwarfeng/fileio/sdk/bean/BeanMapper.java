@@ -1,7 +1,9 @@
 package com.dwarfeng.fileio.sdk.bean;
 
+import com.dwarfeng.fileio.sdk.bean.dto.*;
 import com.dwarfeng.fileio.sdk.bean.entity.*;
 import com.dwarfeng.fileio.sdk.bean.key.*;
+import com.dwarfeng.fileio.stack.bean.dto.*;
 import com.dwarfeng.fileio.stack.bean.entity.*;
 import com.dwarfeng.fileio.stack.bean.key.TaskItemKey;
 import com.dwarfeng.fileio.stack.bean.key.TaskSettingItemKey;
@@ -334,6 +336,70 @@ public interface BeanMapper {
 
     @InheritInverseConfiguration
     User userFromWebInput(WebInputUser webInputUser);
+
+    // endregion
+
+    // region Fileio Operate Dto
+
+    WebInputFileCreateInfo fileCreateInfoToWebInput(FileCreateInfo fileCreateInfo);
+
+    @InheritInverseConfiguration
+    FileCreateInfo fileCreateInfoFromWebInput(WebInputFileCreateInfo webInputFileCreateInfo);
+
+    WebInputFileDownloadInfo fileDownloadInfoToWebInput(FileDownloadInfo fileDownloadInfo);
+
+    @InheritInverseConfiguration
+    FileDownloadInfo fileDownloadInfoFromWebInput(WebInputFileDownloadInfo webInputFileDownloadInfo);
+
+    WebInputFileRemoveInfo fileRemoveInfoToWebInput(FileRemoveInfo fileRemoveInfo);
+
+    @InheritInverseConfiguration
+    FileRemoveInfo fileRemoveInfoFromWebInput(WebInputFileRemoveInfo webInputFileRemoveInfo);
+
+    WebInputFileUploadInfo fileUploadInfoToWebInput(FileUploadInfo fileUploadInfo);
+
+    @InheritInverseConfiguration
+    FileUploadInfo fileUploadInfoFromWebInput(WebInputFileUploadInfo webInputFileUploadInfo);
+
+    WebInputMetadataUpsertInfo metadataUpsertInfoToWebInput(MetadataUpsertInfo metadataUpsertInfo);
+
+    @InheritInverseConfiguration
+    MetadataUpsertInfo metadataUpsertInfoFromWebInput(WebInputMetadataUpsertInfo webInputMetadataUpsertInfo);
+
+    WebInputTaskCreateInfo taskCreateInfoToWebInput(TaskCreateInfo taskCreateInfo);
+
+    @InheritInverseConfiguration
+    TaskCreateInfo taskCreateInfoFromWebInput(WebInputTaskCreateInfo webInputTaskCreateInfo);
+
+    WebInputTaskExecuteInfo taskExecuteInfoToWebInput(TaskExecuteInfo taskExecuteInfo);
+
+    @InheritInverseConfiguration
+    TaskExecuteInfo taskExecuteInfoFromWebInput(WebInputTaskExecuteInfo webInputTaskExecuteInfo);
+
+    WebInputTaskStartInfo taskStartInfoToWebInput(TaskStartInfo taskStartInfo);
+
+    @InheritInverseConfiguration
+    TaskStartInfo taskStartInfoFromWebInput(WebInputTaskStartInfo webInputTaskStartInfo);
+
+    WebInputTemplateCreateInfo templateCreateInfoToWebInput(TemplateCreateInfo templateCreateInfo);
+
+    @InheritInverseConfiguration
+    TemplateCreateInfo templateCreateInfoFromWebInput(WebInputTemplateCreateInfo webInputTemplateCreateInfo);
+
+    WebInputTemplateDownloadInfo templateDownloadInfoToWebInput(TemplateDownloadInfo templateDownloadInfo);
+
+    @InheritInverseConfiguration
+    TemplateDownloadInfo templateDownloadInfoFromWebInput(WebInputTemplateDownloadInfo webInputTemplateDownloadInfo);
+
+    WebInputTemplateRemoveInfo templateRemoveInfoToWebInput(TemplateRemoveInfo templateRemoveInfo);
+
+    @InheritInverseConfiguration
+    TemplateRemoveInfo templateRemoveInfoFromWebInput(WebInputTemplateRemoveInfo webInputTemplateRemoveInfo);
+
+    WebInputTemplateUploadInfo templateUploadInfoToWebInput(TemplateUploadInfo templateUploadInfo);
+
+    @InheritInverseConfiguration
+    TemplateUploadInfo templateUploadInfoFromWebInput(WebInputTemplateUploadInfo webInputTemplateUploadInfo);
 
     // endregion
 }

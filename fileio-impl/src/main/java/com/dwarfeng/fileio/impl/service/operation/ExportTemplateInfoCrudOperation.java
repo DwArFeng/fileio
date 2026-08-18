@@ -1,9 +1,12 @@
 package com.dwarfeng.fileio.impl.service.operation;
 
+import com.dwarfeng.fileio.impl.handler.FtpPathResolver;
+import com.dwarfeng.fileio.sdk.util.FileUtil;
 import com.dwarfeng.fileio.stack.bean.entity.ExportTemplateInfo;
 import com.dwarfeng.fileio.stack.bean.key.TaskSettingItemKey;
 import com.dwarfeng.fileio.stack.cache.ExportTemplateInfoCache;
 import com.dwarfeng.fileio.stack.dao.ExportTemplateInfoDao;
+import com.dwarfeng.ftp.stack.handler.FtpHandler;
 import com.dwarfeng.subgrade.sdk.exception.ServiceExceptionCodes;
 import com.dwarfeng.subgrade.sdk.service.custom.operation.BatchCrudOperation;
 import com.dwarfeng.subgrade.stack.exception.ServiceException;
@@ -18,15 +21,23 @@ public class ExportTemplateInfoCrudOperation implements BatchCrudOperation<TaskS
     private final ExportTemplateInfoDao exportTemplateInfoDao;
     private final ExportTemplateInfoCache exportTemplateInfoCache;
 
+    private final FtpHandler ftpHandler;
+
+    private final FtpPathResolver ftpPathResolver;
+
     @Value("${com.dwarfeng.fileio.cache.timeout.entity.export_template_info}")
     private long exportTemplateInfoTimeout;
 
     public ExportTemplateInfoCrudOperation(
             ExportTemplateInfoDao exportTemplateInfoDao,
-            ExportTemplateInfoCache exportTemplateInfoCache
+            ExportTemplateInfoCache exportTemplateInfoCache,
+            FtpHandler ftpHandler,
+            FtpPathResolver ftpPathResolver
     ) {
         this.exportTemplateInfoDao = exportTemplateInfoDao;
         this.exportTemplateInfoCache = exportTemplateInfoCache;
+        this.ftpHandler = ftpHandler;
+        this.ftpPathResolver = ftpPathResolver;
     }
 
     @Override
@@ -62,7 +73,16 @@ public class ExportTemplateInfoCrudOperation implements BatchCrudOperation<TaskS
 
     @Override
     public void delete(TaskSettingItemKey key) throws Exception {
-        // TODO 如果存在票据文件，则删除票据文件。
+        // 如果存在票据文件，则删除票据文件。
+        if (ftpHandler.existsFile(
+                ftpPathResolver.resolvePath(FtpPathResolver.RELATIVE_PATHS_EXPORT_TEMPLATE),
+                FileUtil.resolveFileName(key)
+        )) {
+            ftpHandler.deleteFile(
+                    ftpPathResolver.resolvePath(FtpPathResolver.RELATIVE_PATHS_EXPORT_TEMPLATE),
+                    FileUtil.resolveFileName(key)
+            );
+        }
 
         // 删除票据文件信息实体自身。
         exportTemplateInfoCache.delete(key);

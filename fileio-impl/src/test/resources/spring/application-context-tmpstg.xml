@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns:tmpstg="http://dwarfeng.com/schema/dwarfeng-tmpstg"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.springframework.org/schema/beans"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://dwarfeng.com/schema/dwarfeng-tmpstg
+        http://dwarfeng.com/schema/dwarfeng-tmpstg/dwarfeng-tmpstg.xsd"
+>
+
+    <tmpstg:config
+            temporary-file-directory-path="${com.dwarfeng.fileio.tmpstg.temporary_file_directory_path}"
+            temporary-file-prefix="${com.dwarfeng.fileio.tmpstg.temporary_file_prefix}"
+            temporary-file-suffix="${com.dwarfeng.fileio.tmpstg.temporary_file_suffix}"
+            max-buffer-size-per-storage="${com.dwarfeng.fileio.tmpstg.max_buffer_size_per_storage}"
+            max-buffer-size-total="${com.dwarfeng.fileio.tmpstg.max_buffer_size_total}"
+            clear-disposed-interval="${com.dwarfeng.fileio.tmpstg.clear_disposed_interval}"
+            check-memory-interval="${com.dwarfeng.fileio.tmpstg.check_memory_interval}"
+    />
+    <tmpstg:handler/>
+    <tmpstg:qos/>
+</beans>
