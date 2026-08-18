@@ -401,5 +401,10 @@ public interface BeanMapper {
     @InheritInverseConfiguration
     TemplateUploadInfo templateUploadInfoFromWebInput(WebInputTemplateUploadInfo webInputTemplateUploadInfo);
 
+    FastJsonPurgeFinishedResult purgeFinishedResultToWebInput(PurgeFinishedResult purgeFinishedResult);
+
+    @InheritInverseConfiguration
+    PurgeFinishedResult purgeFinishedResultFromWebInput(FastJsonPurgeFinishedResult fastJsonPurgeFinishedResult);
+
     // endregion
 }

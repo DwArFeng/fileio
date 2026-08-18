@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringFacetInspection, XmlUnusedNamespaceDeclaration -->
+<beans
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.springframework.org/schema/beans"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd"
+>
+
+    <!--
+            本配置文件为 DctImporter 提供必要的 ValueCodingHandler 等 bean。
+            如果需要使用 DctImporter，请同时在 opt-importer.xml 中启用 DctImporter，
+            并取消下方配置的注释，然后按照实际情况对下方参数进行配置。
+
+            可以在下方的参数中直接赋值，也可以使用 value placeholder 进行占位，
+            并将真正的配置值以 properties 文件的形式放在 confext 目录中。
+
+            如一个 ValueCodingHandler 不满足使用需求（如不同导入模板需要使用不同的数据类型），
+            应该将下方的 bean 定义复制多份，分配不同的 id，为 ApplicationContext 提供多个 bean。
+            DctImporter 通过参数中的 value_coding_handler_bean_name 指定使用的 ValueCodingHandler Bean；
+            使用其它 id 时，应将该参数设置为对应的 Bean 名称。
+
+            ValueCodingHandler 相关 bean 说明：
+            ValueCodingHandler 用于将 dct 协议格式的数据解码为 Java 对象，默认支持的值类型包括：
+            Boolean、Byte、Short、Integer、Long、Float、Double、BigDecimal、BigInteger、Character、String。
+            可以通过调整 dctImporterRegistry.valueCodecs 列表中的 bean 定义来调整支持的值类型。
+    -->
+    <!--
+    <util:list id="dctImporterRegistry.valueCodecs">
+        <bean class="com.dwarfeng.dct.impl.handler.vc.BooleanValueCodec"/>
+        <bean class="com.dwarfeng.dct.impl.handler.vc.ByteValueCodec"/>
+        <bean class="com.dwarfeng.dct.impl.handler.vc.ShortValueCodec"/>
+        <bean class="com.dwarfeng.dct.impl.handler.vc.IntegerValueCodec"/>
+        <bean class="com.dwarfeng.dct.impl.handler.vc.LongValueCodec"/>
+        <bean class="com.dwarfeng.dct.impl.handler.vc.FloatValueCodec"/>
+        <bean class="com.dwarfeng.dct.impl.handler.vc.DoubleValueCodec"/>
+        <bean class="com.dwarfeng.dct.impl.handler.vc.BigDecimalValueCodec"/>
+        <bean class="com.dwarfeng.dct.impl.handler.vc.BigIntegerValueCodec"/>
+        <bean class="com.dwarfeng.dct.impl.handler.vc.CharacterValueCodec"/>
+        <bean class="com.dwarfeng.dct.impl.handler.vc.StringValueCodec"/>
+    </util:list>
+    <bean
+            id="dctImporterRegistry.valueCodingHandler"
+            class="com.dwarfeng.fileio.impl.handler.DctValueCodingHandlerUtil"
+            factory-method="newValueCodingHandler"
+    >
+        <constructor-arg name="valueCodecs" ref="dctImporterRegistry.valueCodecs"/>
+    </bean>
+    -->
+</beans>

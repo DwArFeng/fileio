@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringFacetInspection, XmlUnusedNamespaceDeclaration -->
+<beans
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.springframework.org/schema/beans"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd"
+>
+
+    <!--
+            本配置文件为 SplsReader 提供可选的 ArgsResolver Bean。
+            如果需要使用 SplsReader，请同时在 opt-reader.xml 中启用 SplsReader，
+            并取消下方配置的注释，然后按照实际情况对下方参数进行配置。
+
+            ArgsResolver Bean 的名称由 args_resolver_bean_name 参数直接引用。
+            ArgsResolver 的 Bean 必须实现 com.dwarfeng.fileio.impl.handler.reader.spls.ArgsResolver 接口。
+            同一个 ArgsResolver 可以被多个读取任务重复使用。
+
+            如一个 ArgsResolver 不满足使用需求（如不同元数据参数需要采用不同编码格式），
+            应该将下方的 Bean 定义复制多份，分配不同的 id，并在 args_resolver_bean_name 中指定对应的 Bean 名称。
+            自定义解析器应确保能够安全处理元数据中的参数字符串，并明确限制可接受的数据类型。
+
+            FastJsonArgsResolver 说明：
+            FastJsonArgsResolver 使用 Fastjson 将元数据中的 JSON 数组解析为对象数组。
+            auto_type_accepts 参数配置在 fileio/read.properties 中，使用逗号分隔允许反序列化的类或包前缀。
+            该解析器启用了 Fastjson AutoType 支持；应仅配置受信任的最小类集合，避免反序列化不可信类型。
+    -->
+    <!--
+    <bean
+            id="splsReaderRegistry.argsResolver.fastJsonArgsResolver"
+            class="com.dwarfeng.fileio.impl.handler.reader.spls.ar.FastJsonArgsResolver"
+    />
+    -->
+</beans>
