@@ -4,6 +4,15 @@
 
 ### 功能构建
 
+- 新增 telqos 指令。
+  - com.dwarfeng.fileio.impl.service.telqos.ExportCommand。
+  - com.dwarfeng.fileio.impl.service.telqos.ExportTemplateCommand。
+  - com.dwarfeng.fileio.impl.service.telqos.ImportCommand。
+  - com.dwarfeng.fileio.impl.service.telqos.ImportTemplateCommand。
+  - com.dwarfeng.fileio.impl.service.telqos.PurgeCommand。
+  - com.dwarfeng.fileio.impl.service.telqos.ResetCommand。
+  - com.dwarfeng.fileio.impl.service.telqos.SupportCommand。
+
 - 实现核心服务。
   - com.dwarfeng.fileio.stack.service.ImportService。
   - com.dwarfeng.fileio.stack.service.ExportService。
