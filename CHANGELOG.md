@@ -4,6 +4,10 @@
 
 ### 功能构建
 
+- 实现核心服务。
+  - com.dwarfeng.fileio.stack.service.ImportService。
+  - com.dwarfeng.fileio.stack.service.ExportService。
+
 - 实现预设推送器。
   - com.dwarfeng.fileio.impl.handler.pusher.DrainPusher。
   - com.dwarfeng.fileio.impl.handler.pusher.LogPusher。

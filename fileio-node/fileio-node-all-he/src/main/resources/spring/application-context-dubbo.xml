@@ -160,6 +160,18 @@
             ref="userMaintainServiceImpl"
             group="${com.dwarfeng.fileio.dubbo.provider.group}"
     />
+    <dubbo:service
+            interface="com.dwarfeng.fileio.stack.service.ExportService"
+            ref="exportServiceImpl"
+            protocol="hessian"
+            group="${com.dwarfeng.fileio.dubbo.provider.group}"
+    />
+    <dubbo:service
+            interface="com.dwarfeng.fileio.stack.service.ImportService"
+            ref="importServiceImpl"
+            protocol="hessian"
+            group="${com.dwarfeng.fileio.dubbo.provider.group}"
+    />
 
     <!-- endregion -->
 
