@@ -4,6 +4,8 @@
 
 ### 功能构建
 
+- 完成 `fileio-distribute` 模块，打包测试通过。
+
 - 新增 telqos 指令。
   - com.dwarfeng.fileio.impl.service.telqos.ExportCommand。
   - com.dwarfeng.fileio.impl.service.telqos.ExportTemplateCommand。
