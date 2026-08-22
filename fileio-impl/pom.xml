@@ -11,7 +11,7 @@
     <parent>
         <groupId>com.dwarfeng</groupId>
         <artifactId>fileio</artifactId>
-        <version>1.0.1.a-SNAPSHOT</version>
+        <version>1.0.1.a</version>
     </parent>
 
     <artifactId>fileio-impl</artifactId>
