@@ -66,7 +66,10 @@ public final class ServiceExceptionCodes {
      * @param exceptionCodeOffset 指定的异常代号的偏移量。
      */
     public static void setExceptionCodeOffset(int exceptionCodeOffset) {
+        // 设置 EXCEPTION_CODE_OFFSET 的值。
         EXCEPTION_CODE_OFFSET = exceptionCodeOffset;
+
+        // 以新的 EXCEPTION_CODE_OFFSET 为基准，更新异常代码的值。
         EXPORT_FILE_INFO_EXISTS.setCode(offset(0));
         EXPORT_FILE_INFO_NOT_EXISTS.setCode(offset(10));
         EXPORT_TASK_NOT_EXISTS.setCode(offset(20));

@@ -4,6 +4,9 @@
 
 ### 功能构建
 
+- `fileio-sdk` 子模块类优化注释、文档注释格式、代码换行格式。
+  - com.dwarfeng.fileio.sdk.util.ServiceExceptionCodes。
+
 - 依赖升级。
   - 升级 `jackson` 依赖版本为 `2.21.5` 以规避漏洞。
   - 升级 `spring-telqos` 依赖版本为 `2.0.3.a` 以规避漏洞。
