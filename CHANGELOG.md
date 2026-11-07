@@ -17,7 +17,11 @@
 
 ### Bug 修复
 
-- (无)
+- 修复部分 DTO 实体中错误的字段注解。
+  - com.dwarfeng.fileio.sdk.bean.entity.FastJsonExportTask。
+  - com.dwarfeng.fileio.sdk.bean.entity.FastJsonImportTask。
+  - com.dwarfeng.fileio.sdk.bean.entity.JSFixedFastJsonExportTask。
+  - com.dwarfeng.fileio.sdk.bean.entity.JSFixedFastJsonImportTask。
 
 ### 功能移除
 

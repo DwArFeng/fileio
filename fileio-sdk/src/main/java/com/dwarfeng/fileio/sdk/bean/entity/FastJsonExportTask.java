@@ -46,7 +46,7 @@ public class FastJsonExportTask implements Bean {
     @JSONField(name = "setting_key", ordinal = 2)
     private FastJsonLongIdKey settingKey;
 
-    @JSONField(name = "userKey", ordinal = 3)
+    @JSONField(name = "user_key", ordinal = 3)
     private FastJsonStringIdKey userKey;
 
     @JSONField(name = "status", ordinal = 4)

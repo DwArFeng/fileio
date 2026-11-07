@@ -46,7 +46,7 @@ public class JSFixedFastJsonExportTask implements Bean {
     @JSONField(name = "setting_key", ordinal = 2)
     private JSFixedFastJsonLongIdKey settingKey;
 
-    @JSONField(name = "userKey", ordinal = 3)
+    @JSONField(name = "user_key", ordinal = 3)
     private FastJsonStringIdKey userKey;
 
     @JSONField(name = "status", ordinal = 4)
@@ -70,10 +70,10 @@ public class JSFixedFastJsonExportTask implements Bean {
     @JSONField(name = "message", ordinal = 10)
     private String message;
 
-    @JSONField(name = "should_dead_date", ordinal = 11)
+    @JSONField(name = "should_expire_date", ordinal = 11)
     private Date shouldExpireDate;
 
-    @JSONField(name = "last_beat_date", ordinal = 12)
+    @JSONField(name = "should_dead_date", ordinal = 12)
     private Date shouldDeadDate;
 
     public JSFixedFastJsonExportTask() {
