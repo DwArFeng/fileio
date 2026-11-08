@@ -4,6 +4,14 @@
 
 ### 功能构建
 
+- 依赖升级。
+  - 升级 `guava` 依赖版本为 `33.7.1-jre` 以规避漏洞。
+  - 升级 `jackson` 依赖版本为 `2.21.7` 以规避漏洞。
+  - 升级 `subgrade` 依赖版本为 `1.10.0.a` 以规避漏洞。
+  - 升级 `spring-terminator` 依赖版本为 `2.0.3.a` 以规避漏洞。
+  - 升级 `dwarfeng-datamark` 依赖版本为 `2.2.1.a` 以规避漏洞。
+  - 升级 `dwarfeng-ftp` 依赖版本为 `2.1.1.a` 以规避漏洞。
+
 - `fileio-sdk` 子模块类优化注释、文档注释格式、代码换行格式。
   - com.dwarfeng.fileio.sdk.bean.BeanMapper。
 

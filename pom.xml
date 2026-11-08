@@ -45,7 +45,7 @@
         <jetty.version>9.4.58.v20250814</jetty.version>
         <netty.version>4.2.9.Final</netty.version>
         <zookeeper.version>3.9.5</zookeeper.version>
-        <guava.version>32.0.1-jre</guava.version>
+        <guava.version>33.7.1-jre</guava.version>
         <curator.version>4.3.0</curator.version>
         <aspectj.version>1.8.14</aspectj.version>
         <hibernate.version>5.4.24.Final</hibernate.version>
@@ -54,16 +54,16 @@
         <log4j2.version>2.25.4</log4j2.version>
         <jboss-logging.version>3.4.3.Final</jboss-logging.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
-        <jackson.version>2.21.5</jackson.version>
+        <jackson.version>2.21.7</jackson.version>
         <groovy.version>4.0.31</groovy.version>
         <commons-csv.version>1.11.0</commons-csv.version>
         <poi.version>4.1.2</poi.version>
         <dutil.version>0.4.2.a-beta</dutil.version>
-        <subgrade.version>1.8.4.a</subgrade.version>
+        <subgrade.version>1.10.0.a</subgrade.version>
         <spring-telqos.version>2.0.3.a</spring-telqos.version>
-        <spring-terminator.version>2.0.2.a</spring-terminator.version>
-        <dwarfeng-datamark.version>2.2.0.a</dwarfeng-datamark.version>
-        <dwarfeng-ftp.version>2.1.0.a</dwarfeng-ftp.version>
+        <spring-terminator.version>2.0.3.a</spring-terminator.version>
+        <dwarfeng-datamark.version>2.2.1.a</dwarfeng-datamark.version>
+        <dwarfeng-ftp.version>2.1.1.a</dwarfeng-ftp.version>
         <dwarfeng-tmpstg.version>2.1.0.a</dwarfeng-tmpstg.version>
         <dwarfeng-dct.version>3.0.2.a</dwarfeng-dct.version>
         <snowflake.version>2.0.2.a</snowflake.version>
