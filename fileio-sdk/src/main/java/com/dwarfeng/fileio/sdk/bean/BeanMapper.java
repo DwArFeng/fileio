@@ -339,7 +339,7 @@ public interface BeanMapper {
 
     // endregion
 
-    // region Fileio Operate Dto
+    // region Fileio DTO
 
     WebInputFileCreateInfo fileCreateInfoToWebInput(FileCreateInfo fileCreateInfo);
 
@@ -389,7 +389,9 @@ public interface BeanMapper {
     WebInputTemplateDownloadInfo templateDownloadInfoToWebInput(TemplateDownloadInfo templateDownloadInfo);
 
     @InheritInverseConfiguration
-    TemplateDownloadInfo templateDownloadInfoFromWebInput(WebInputTemplateDownloadInfo webInputTemplateDownloadInfo);
+    TemplateDownloadInfo templateDownloadInfoFromWebInput(
+            WebInputTemplateDownloadInfo webInputTemplateDownloadInfo
+    );
 
     WebInputTemplateRemoveInfo templateRemoveInfoToWebInput(TemplateRemoveInfo templateRemoveInfo);
 
@@ -404,7 +406,9 @@ public interface BeanMapper {
     FastJsonPurgeFinishedResult purgeFinishedResultToWebInput(PurgeFinishedResult purgeFinishedResult);
 
     @InheritInverseConfiguration
-    PurgeFinishedResult purgeFinishedResultFromWebInput(FastJsonPurgeFinishedResult fastJsonPurgeFinishedResult);
+    PurgeFinishedResult purgeFinishedResultFromWebInput(
+            FastJsonPurgeFinishedResult fastJsonPurgeFinishedResult
+    );
 
     // endregion
 }

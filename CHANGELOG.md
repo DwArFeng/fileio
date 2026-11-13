@@ -4,7 +4,8 @@
 
 ### 功能构建
 
-- (无)
+- `fileio-sdk` 子模块类优化注释、文档注释格式、代码换行格式。
+  - com.dwarfeng.fileio.sdk.bean.BeanMapper。
 
 ### Bug 修复
 
