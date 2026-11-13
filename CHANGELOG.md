@@ -4,6 +4,10 @@
 
 ### 功能构建
 
+- Wiki 编写。
+  - docs/wiki/zh-CN/ShellScripts.md。
+  - docs/wiki/zh-CN/BatchScripts.md。
+
 - 依赖升级。
   - 升级 `guava` 依赖版本为 `33.7.1-jre` 以规避漏洞。
   - 升级 `jackson` 依赖版本为 `2.21.7` 以规避漏洞。
