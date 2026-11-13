@@ -32,7 +32,6 @@ public class TemporaryFileNotExistsException extends TemporaryFileException {
         this.name = name;
     }
 
-    @SuppressWarnings("DuplicatedCode")
     @Override
     public String getMessage() {
         String typeString;
